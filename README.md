@@ -5,6 +5,8 @@
 Esse app foi criado para por em praticas os conhecimentos adquiridos durante o programa de estagio Fourcamp-2022 na stack de Android com JAVA
 
 ## O  que foi utilizado
+
+[![ANDROID LOGO](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
 * Intent
 * Binding
 * SharedPreferences
