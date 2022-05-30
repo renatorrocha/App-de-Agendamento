@@ -2,7 +2,7 @@
 [![FOURSYS LOGO](https://foursys.avantecnologia.com.br//img/logo_empresa.png)](https://foursys.com.br)
 
 ## Sobre o app 
-Esse app foi criado para por em praticas os conhecimentos adquiridos durante o programa de estagio Fourcamp-2022 na stack de Android com JAVA
+Esse app foi criado para por em praticas os conhecimentos adquiridos durante o \n programa de estagio Fourcamp-2022 na stack de Android com JAVA
 
 ## Ferramentas utilizadas
 * Intent
