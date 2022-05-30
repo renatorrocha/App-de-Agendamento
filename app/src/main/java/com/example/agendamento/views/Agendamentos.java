@@ -15,26 +15,31 @@ import com.example.agendamento.databinding.ActivityAgendamentosBinding;
 
 public class Agendamentos extends AppCompatActivity {
 
+    // Declaracao das variaveis
     private ActivityAgendamentosBinding binding;
 
     TextView tvNome, tvHorario, tvAgendamento;
     Button btnSair;
     SharedPreferences preferences;
 
+    // onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendamentos);
         getSupportActionBar().hide();
 
+        // Binding
         binding = ActivityAgendamentosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Pegando os elementos da tela pelo binding
         tvNome = binding.tvNome;
         tvHorario = binding.tvHorario;
         tvAgendamento = binding.tvAgendamento;
         btnSair = binding.btnSair;
 
+        // usando a chave do sharedpreferences
         preferences = getSharedPreferences("chaveGeral", MODE_PRIVATE);
 
         String name = preferences.getString("chaveNome", "");
@@ -42,8 +47,9 @@ public class Agendamentos extends AppCompatActivity {
         String agendamento = preferences.getString("chaveAgendamento", "");
         tvAgendamento.setText(agendamento);
         String horario = preferences.getString("chaveHorario", "");
-        tvHorario.setText(horario);
+        tvHorario.setText(horario + " hr");
 
+        // onclick para limpar os dados da sharedpreferences
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

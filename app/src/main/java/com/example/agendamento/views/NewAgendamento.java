@@ -15,6 +15,7 @@ import com.example.agendamento.databinding.ActivityNewAgendamentoBinding;
 
 public class NewAgendamento extends AppCompatActivity {
 
+    // Declaracao das variaveis
     private ActivityNewAgendamentoBinding binding;
 
     private Button btnSave;
@@ -23,6 +24,7 @@ public class NewAgendamento extends AppCompatActivity {
 
     SharedPreferences sharedPreferences;
 
+    // onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ public class NewAgendamento extends AppCompatActivity {
         binding = ActivityNewAgendamentoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Pegando os elementos da tela
         btnSave = binding.btnSave;
         edtName = binding.edtName;
         edtTime = binding.edtTime;
@@ -43,12 +46,12 @@ public class NewAgendamento extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Enviar dados para a outra activity por meio do bundle
+                //Salvar os dados da activity em variaveis locais
                 String nome = edtName.getText().toString();
                 String agendamento = edtAgendamento.getText().toString();
                 String horario = edtTime.getText().toString();
 
-                // Shared Preferences
+                // Shared Preferences  e suas chaves
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("chaveNome", nome);
                 editor.putString("chaveHorario", horario);
@@ -58,6 +61,7 @@ public class NewAgendamento extends AppCompatActivity {
                 // Toast para aparecer que foi salvo
                 Toast.makeText(NewAgendamento.this, "Seu agendamento foi salvo com sucesso !", Toast.LENGTH_SHORT).show();
 
+                // Intençao para a proxima tela
                 Intent intent = new Intent(NewAgendamento.this, Agendamentos.class);
                 startActivity(intent);
                 finish();
