@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    tools:context=".views.Agendamentos">
+
+    <ImageView
+        android:id="@+id/ivIconDate"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_event_note"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/icon_main" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seu Agendamento:"
+        android:textSize="28sp"
+        android:textColor="@color/headline"
+        android:textAlignment="center"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivIconDate"/>
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView Nome"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/paragraph"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"/>
+
+    <TextView
+        android:id="@+id/tvHorario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView Horario"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/paragraph"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNome"/>
+
+        <TextView
+            android:id="@+id/tvAgendamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView Agendamento"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textColor="@color/paragraph"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHorario"/>
+
+        <Button
+            android:id="@+id/btnSair"
+            style="@style/button"
+            android:background="@drawable/alternative_button_background"
+            android:text="Cancelar Agendamento"
+            android:ems="15"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgendamento"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

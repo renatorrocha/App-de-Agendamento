@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Agendamento</string>
+    <string name="icon_main">Icone de um calendario</string>
+    <string name="welcome">Bem-Vindo !</string>
+    <string name="description">Esse é um app onde você pode agendar uma consulta ou ver suas consultas já agendadas</string>
+</resources>
